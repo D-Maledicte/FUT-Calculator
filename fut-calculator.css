@@ -37,7 +37,7 @@
 
   body {
     width: 100vw;
-    height: 95vh;
+    height: 97vh;
     background-color: #730217;
   }
 
@@ -47,9 +47,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 20px 0 20px 0;
+    margin: 2rem 0 2rem 0;
     background-color:  var(--redfont);
-    height: 25%;
+    height: 20%;
   }
 
   header .titulo-header {
@@ -96,7 +96,7 @@
 main {
     display: flex;
     flex-direction: column;
-    height: 60%;
+    height: 75%;
 }
 
 main .titulo {
@@ -166,8 +166,13 @@ main .resultado {
 
 .resultado figure {
     width: 50%;
-    height: 100%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.resultado figure img {
+  height: 100%;
+  width: auto;
 }
