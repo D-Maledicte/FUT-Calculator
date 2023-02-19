@@ -1,0 +1,173 @@
+/*general*/
+:root {
+    --redfont: #730217;
+    --blackfont: #0D0D0D;
+    --mustardfont: #8C6723;
+    --yellowfont: #F2E41D;
+    --carminfont: #732424;
+    --whitesmoke: whitesmoke;
+    --bggrey: #f8f9fa;
+    --font-xxlg: 8rem;
+    --font-xsxlg: 5rem;
+    --font-xlg: 2.5rem;
+    --font-lg: 2rem;
+    --font-xmd: 1.75rem;
+    --font-md: 1.5rem;
+    --font-sm: 1.25rem;
+    --font-xsm: 1rem;
+  }
+
+  @font-face {
+    font-family: 'EASports';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./EASPORTS.ttf') format('ttf');
+    }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 62.5%;
+    font-family: 'EASports';
+  }
+
+  body {
+    width: 100vw;
+    height: 95vh;
+    background-color: #730217;
+  }
+
+/*header*/
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 0 20px 0;
+    background-color:  var(--redfont);
+    height: 25%;
+  }
+
+  header .titulo-header {
+    font-size: 3rem;
+    height: 100%;
+    width: 50%;
+    color: var(--yellowfont);
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .titulo-header h1 {
+    height: 50%;
+    width: 100%;
+    align-self: center;
+  }
+
+  header figure {
+    height: 100%;
+    width: 25%;
+    background-color: var(--redfont);
+    align-self: center;
+  }
+
+  header .gif img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+  }
+
+  header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header .logo img {
+    height: 100%;
+    width: 70%;
+  }
+/*main*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+}
+
+main .titulo {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo h3 {
+    font-size: 3rem;
+    color: var(--yellowfont);
+}
+
+
+main .calculadora {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    align-items: center;
+    color: var(--yellowfont);
+}
+
+.calculadora label {
+    font-size: var(--font-xlg);
+    width: 20%;
+    margin: 1.5rem;
+}
+
+.calculadora input {
+    width: 20%;
+    height: 30%;
+    font-size: var(--font-xlg);
+    margin-left: 1.5rem;
+}
+
+.calculadora button {
+    width: 15%;
+    height: 30%;
+    font-size: var(--font-xlg);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+main .resultado {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado section {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-xlg);
+    color: var(--yellowfont);
+}
+
+.resultado figure {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
