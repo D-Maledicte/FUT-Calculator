@@ -162,6 +162,7 @@ main .resultado {
     align-items: center;
     font-size: var(--font-xlg);
     color: var(--yellowfont);
+    font-family: 'Roboto', sans-serif;
 }
 
 .resultado section p {
