@@ -146,28 +146,35 @@ function calcularPuntos () {
     
     for (let i = 0; i < tresholds.length; i++) {
         if (tresholds[i].puntos > puntosSumados) {
-            console.log(tresholds[i].puntos)
             let victoriasNecesarias = nextTier(tresholds[i].puntos)
             const tierActual = tresholds[i - 1].name
             const recompensa = tresholds[i - 1].recompensa
-            if (victoriasNecesarias === 1) {
-                victoriasNecesarias = 0;
-            }
+            // if (victoriasNecesarias === 1) {
+            //     victoriasNecesarias = 0;
+            // }
             if (victoriasNecesarias > puntosDerrotas) {
                 pDerrotas.innerText = `Estas en ${tierActual}. Ya no llegas al siguiente tier... EA se te esta cagando de shisa`;
                 recompensas.innerText = `Tu recompensa es: ${recompensa}`; 
                 resultImage.setAttribute('src', './img/barbakahn.png');     
-            } else {
-            pDerrotas.innerText = `Perdiendo lo que queda estas en ${tierActual}... necesitas ${victoriasNecesarias} victorias para alcanzar el siguiente tier`;
-            recompensas.innerText = `Tu recompensa es: ${recompensa}`; 
+            }
+            else {
+                pDerrotas.innerText = `Perdiendo lo que queda estas en ${tierActual}... necesitas ${victoriasNecesarias} victorias para alcanzar el siguiente tier`;
+                recompensas.innerText = `Tu recompensa es: ${recompensa}`; 
             if (tresholds[i - 1].puntos >= 45) {
-            resultImage.setAttribute('src', './img/result.png')}
+                resultImage.setAttribute('src', './img/result.png')}
             else {
                 resultImage.setAttribute('src', './img/badresult.png')
             }
             }
             break;
         }
+        else if (puntosSumados >= tresholds[i].puntos) {
+            const tierActual = tresholds[i].name
+            const recompensa = tresholds[i].recompensa
+            pDerrotas.innerText = `Estas en ${tierActual}... PRO PRO`;
+            recompensas.innerText = `Tu recompensa es: ${recompensa}`;
+            resultImage.setAttribute('src', './img/barbakahn.png');
+        } 
       }
     pHipoteticos.innerText = `Ganando todo llegarias a ${puntosRestantesPotenciales}`
 }
