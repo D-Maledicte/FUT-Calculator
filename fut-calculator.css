@@ -1,10 +1,12 @@
 /*general*/
 :root {
-    --redfont: #730217;
+    --redfont: #7B2742;
+    --xtremeredfont : #ff0505;
+    --carminfont: #732424;
     --blackfont: #0D0D0D;
     --mustardfont: #8C6723;
-    --yellowfont: #F2E41D;
-    --carminfont: #732424;
+    --yellowfont: #D7B620;
+    --yelloishwhitefont : #fdefb0;
     --whitesmoke: whitesmoke;
     --bggrey: #f8f9fa;
     --font-xxlg: 8rem;
@@ -38,7 +40,7 @@
   body {
     width: 100vw;
     height: 97vh;
-    background-color: #730217;
+    background-color: var(--carminfont);
   }
 
 /*header*/
@@ -48,7 +50,7 @@
     flex-direction: row;
     justify-content: space-around;
     margin: 2rem 0 2rem 0;
-    background-color:  var(--redfont);
+    background-color:  var(--carminfont);
     height: 20%;
   }
 
@@ -71,7 +73,7 @@
   header figure {
     height: 100%;
     width: 25%;
-    background-color: var(--redfont);
+    background-color: var(--carminfont);
     align-self: center;
   }
 
@@ -97,14 +99,17 @@ main {
     display: flex;
     flex-direction: column;
     height: 75%;
+    justify-content: center;
+    align-items: center;
 }
 
 main .titulo {
-    width: 100%;
+    width: 80%;
     height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .titulo h3 {
@@ -127,6 +132,15 @@ main .calculadora {
     font-size: var(--font-xlg);
     width: 20%;
     margin: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
 }
 
 .calculadora input {
@@ -134,6 +148,14 @@ main .calculadora {
     height: 30%;
     font-size: var(--font-xlg);
     margin-left: 1.5rem;
+    font-family: 'EASports';
+    color: var(--yelloishwhitefont);
+    background-color: #7b2742;
+    border: .3rem solid var(--yellowfont);
+    padding: 1rem;
+    appearance: none;
+    -moz-appearance: textfield;
+
 }
 
 .calculadora button {
@@ -142,6 +164,10 @@ main .calculadora {
     font-size: var(--font-xlg);
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    font-family: 'EASports';
+    background-color: var(--redfont);
+    border: .3rem solid var(--xtremeredfont);
+    color: var(--yelloishwhitefont);
 }
 
 main .resultado {
@@ -295,6 +321,13 @@ main .resultado {
     width: 30%;
   }
 
+  .titulo-header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   header figure {
     width: 30%;
   }
@@ -386,8 +419,17 @@ main .resultado {
   margin: 0;
   }
   header .titulo-header {
-    font-size: .8rem;
+    font-size: .7rem;
     width: 30%;
+    justify-content: center;
+  }
+
+  .titulo-header h1 {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   header figure {
@@ -400,6 +442,11 @@ main .resultado {
 
   header .logo {
     height: 70%;
+  }
+
+  header .logo img {
+    height: 70%;
+    width: 70%;
   }
 
   /* main */
