@@ -93,6 +93,8 @@ function calcularPuntos () {
             resultImage.setAttribute('src', './img/barbakahn.png');
         } 
       }
-    pHipoteticos.innerText = `Ganando todo llegarias a ${puntosRestantesPotenciales}`
+    if (partidosJugados != 20){
+        pHipoteticos.innerText = `Ganando todo llegarias a ${puntosRestantesPotenciales}`
+    }
     rachaDePartidos.innerText = `Tu racha actual es de ${victoriasDigitadas}V y ${derrotasDigitadas}D. Tu forma es ${forma}`
 }
