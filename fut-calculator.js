@@ -62,11 +62,17 @@ function calcularPuntos () {
         if (tresholds[i].puntos > puntosSumados) {
             let victoriasNecesarias = nextTier(tresholds[i].puntos)
             const tierActual = tresholds[i - 1].name
+            const puntajeTierActual = tresholds[i - 1].puntos
             const recompensa = tresholds[i - 1].recompensa
             if (victoriasNecesarias > puntosDerrotas) {
-                pDerrotas.innerText = `Estas en ${tierActual}. Ya no llegas al siguiente tier... EA se te esta cagando de shisa`;
                 recompensas.innerText = `Tu recompensa es: ${recompensa}`; 
-                resultImage.setAttribute('src', './img/barbakahn.png');     
+                if (puntajeTierActual >= 45) {
+                    pDerrotas.innerText = `Estas en ${tierActual}, otro dia en la oficina`;
+                    resultImage.setAttribute('src', './img/siuu.png')
+                } else {
+                    pDerrotas.innerText = `Estas en ${tierActual}. Ya no llegas al siguiente tier... EA se te esta cagando de shisa`;
+                    resultImage.setAttribute('src', './img/barbakahn.png');
+                };     
             }
             else {
                 pDerrotas.innerText = `Perdiendo lo que queda estas en ${tierActual}... necesitas ${victoriasNecesarias} victorias para alcanzar el siguiente tier`;
